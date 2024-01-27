@@ -11,7 +11,7 @@ const Cards = () => {
     <section id="articulos" className="main-content py-10 bg-red-950">
       {/* Dentro de la sección de Artículos */}
       <div className="centered2">
-        <h2 className="contact-heading text-center text-sans italic mb-8 text-[25px] uppercase text-amber-600">Artesanía ancestral hecha a mano</h2>
+        <h2 className="contact-heading text-center font-sans italic mb-8 text-[30px]  text-amber-600">Artesanía ancestral hecha a mano</h2>
         <div className="grid grid-cols-3 gap-8">
           <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
             <img
