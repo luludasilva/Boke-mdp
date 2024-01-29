@@ -4,11 +4,19 @@ import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import img from "../assets/logo.png";
 import { Link as RouterLink } from "react-router-dom"; 
+import LoginAdmin from "./LoginAdmin";
 
 
 const Nav = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  const [showLogin, setShowLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
+  };
+
   const content = (
     <>
       <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-amber-900 transition z-50">
@@ -30,7 +38,7 @@ const Nav = () => {
           </Link>
           <Link spy={true} smooth={true} to="Login">
             <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
-              Ingreso
+              Login Admin
             </li>
           </Link>
         </ul>
@@ -65,11 +73,11 @@ const Nav = () => {
                 Clientes
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="login">
-                <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
-                Ingreso
+              <RouterLink  to="LoginAdmin">
+                <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer dropdown">
+                <button onClick={toggleLogin}>Login Admin</button>
                 </li>
-              </Link>
+              </RouterLink>
             </ul>
           </div>
         </div>
@@ -77,6 +85,7 @@ const Nav = () => {
         <button className="block sm:hidden transition" onClick={handleClick}>
           {click ? <FaTimes /> : <CiMenuFries />}
         </button>
+        {showLogin && <LoginAdmin />}
       </div>
     </nav>
   );
