@@ -21,14 +21,15 @@ const Nav = () => {
     <>
       <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-amber-900 transition z-50">
         <ul className="text-center text-xl p-20">
-          <Link spy={true} smooth={true} to="Temporada 2024">
-            <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
-            Temporada 2024
-            </li>
-          </Link>
           <Link spy={true} smooth={true} to="nuestra-historia">
             <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
             Nuestra Historia
+            </li>
+          </Link>
+
+          <Link spy={true} smooth={true} to="Temporada">
+            <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
+            Temporada 2024
             </li>
           </Link>
           <Link spy={true} smooth={true} to="Clientes">
@@ -58,17 +59,19 @@ const Nav = () => {
         <div className="lg:flex md:flex lg:flex-1 center justify-end items font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mr-16 text-[18px]">
-              <Link spy={true} smooth={true} to="Temporada 2024">
-                <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
-                Temporada 2024
-                </li>
-              </Link>
+
               <Link spy={true} smooth={true} to="nuestra-historia">
                 <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
                 Nuestra Historia
                 </li>
               </Link>
-              <Link spy={true} smooth={true} to="Cientes">
+
+              <Link spy={true} smooth={true} to="Temporada">
+                <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
+                Temporada 2024
+                </li>
+              </Link>
+              <Link spy={true} smooth={true} to="Clientes">
                 <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
                 Clientes
                 </li>

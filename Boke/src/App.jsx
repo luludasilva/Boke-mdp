@@ -4,6 +4,8 @@ import Nav from "./Components/Nav";
 import Banner from "./Components/Banner";
 import Articulos from "./Components/Articulos";
 import Historia from "./Components/Historia";
+import Clientes from "./Components/Clientes";
+import Temporada from "./Components/Temporada";
 
 /*import AdminDashboard from "./Components/AdminDashboard";  falta importar y hacer esto*/
 
@@ -44,7 +46,10 @@ const App = () => {
             <Nav />
             <Banner />
             <Articulos />
+            <Temporada />
             <Historia />
+            <Clientes />
+            
             <Whatsapp />
             <Footer />
           </div>
