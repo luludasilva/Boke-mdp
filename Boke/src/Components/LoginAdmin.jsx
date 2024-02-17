@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { FaTimes } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const LoginAdmin = () => {
   const [username, setUsername] = useState('');
@@ -8,15 +9,23 @@ const LoginAdmin = () => {
   const [error, setError] = useState('');
   const [isOpen, setIsOpen] = useState(true);
 
+  // Obtén la función de navegación
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5173/LoginAdmin', { username, password });
-      console.log(response.data);
-      // Aquí redirige a otra página si el inicio de sesión es exitoso
+      const response = await axios.post('http://localhost:3002/api/users/login', { username, password });
+
+      // Si el inicio de sesión es exitoso, redirige a la ruta correspondiente
+      if (response.data.success) {
+        navigate('/detalles/categoria/id'); // Ajusta la ruta según tu estructura
+      } else {
+        setError('Credenciales incorrectas');
+      }
     } catch (error) {
       console.error('Error de inicio de sesión:', error);
-      setError('Credenciales incorrectas');
+      setError('Hubo un error durante el inicio de sesión');
     }
   };
 

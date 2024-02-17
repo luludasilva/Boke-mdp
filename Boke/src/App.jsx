@@ -1,16 +1,11 @@
+// App.jsx
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Catalogo from './Components/Catalogo';
+import DetallesMochila from './Components/DetallesMochila'; // Agregamos el nuevo componente DetalleProducto
 import Nav from "./Components/Nav";
-import Banner from "./Components/Banner";
-import Articulos from "./Components/Articulos";
-import Historia from "./Components/Historia";
-import Clientes from "./Components/Clientes";
-import Temporada from "./Components/Temporada";
-
-/*import AdminDashboard from "./Components/AdminDashboard";  falta importar y hacer esto*/
-
 import Whatsapp from "./Components/Whatsapp";
-import Footer from "./Components/Footer";
 import { ThreeCircles } from "react-loader-spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -44,14 +39,13 @@ const App = () => {
         ) : (
           <div className="">
             <Nav />
-            <Banner />
-            <Articulos />
-            <Temporada />
-            <Historia />
-            <Clientes />
-            
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catalogo" element={<Catalogo />} />
+              <Route path="/detalle/:categoria/:id" element={<DetallesMochila />} />
+              {/* Agrega otras rutas según sea necesario */}
+            </Routes>
             <Whatsapp />
-            <Footer />
           </div>
         )}
       </>
@@ -60,3 +54,4 @@ const App = () => {
 };
 
 export default App;
+

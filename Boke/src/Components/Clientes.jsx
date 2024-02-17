@@ -1,6 +1,6 @@
 import React from 'react';
 import cliente from '../assets/Cliente satisfecho.jpg';
-import cliente1 from '../assets/cliente satisfecho1.jpg';
+import cliente1 from "../assets/Cliente satisfecho1.jpg";
 import cliente2 from '../assets/Cliente satisfecho2.jpg';
 import cliente3 from '../assets/Cliente satisfecho3.jpg';
 import cliente4 from '../assets/Cliente satisfecho4.jpg';
@@ -24,35 +24,35 @@ const Clientes = () => {
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
               <img
               src={cliente1}
-              alt="cliente satisfecho"
+              alt="cliente satisfecho1"
               className="item-img w-full h-64 object-cover rounded-md"
               />
              </div>
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
               <img
                 src={cliente2}
-                alt="cliente satisfecho"
+                alt="cliente satisfecho2"
                 className="item-img w-full h-64 object-cover rounded-md"
                />
              </div>
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
               <img
                 src={cliente3}
-                alt="cliente satisfecho"
+                alt="cliente satisfecho3"
                 className="item-img w-full h-64 object-cover rounded-md"
                />
              </div>
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
               <img
                 src={cliente4}
-                alt="cliente satisfecho"
+                alt="cliente satisfecho4"
                 className="item-img w-full h-64 object-cover rounded-md"
                />
              </div>
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
               <img
                 src={cliente5}
-                alt="cliente satisfecho"
+                alt="cliente satisfecho5"
                 className="item-img w-full h-64 object-cover rounded-md"
                />
              </div>

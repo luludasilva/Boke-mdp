@@ -21,6 +21,11 @@ const Nav = () => {
     <>
       <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-amber-900 transition z-50">
         <ul className="text-center text-xl p-20">
+        <RouterLink  to="/">
+          <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
+        Home
+        </li>
+        </RouterLink>
           <Link spy={true} smooth={true} to="nuestra-historia">
             <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
             Nuestra Historia
@@ -56,10 +61,15 @@ const Nav = () => {
 </span>
 
         </div>
-        <div className="lg:flex md:flex lg:flex-1 center justify-end items font-normal hidden">
+        <div className="lg:flex md:flex lg:flex-1 center justify-center items font-normal hidden">
           <div className="flex-10">
-            <ul className="flex gap-8 mr-16 text-[18px]">
+            <ul className="flex gap-8 mr-16 text-[16px]">
 
+            <RouterLink  to="/">
+            <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
+                Home
+                </li>
+              </RouterLink>
               <Link spy={true} smooth={true} to="nuestra-historia">
                 <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
                 Nuestra Historia
@@ -76,11 +86,9 @@ const Nav = () => {
                 Clientes
                 </li>
               </Link>
-              <RouterLink  to="LoginAdmin">
                 <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer dropdown">
                 <button onClick={toggleLogin}>Login Admin</button>
                 </li>
-              </RouterLink>
             </ul>
           </div>
         </div>

@@ -5,6 +5,8 @@ import Remerones from '../assets/Remerones.jpg';
 import Remeron from '../assets/Remeron.jpg';
 import Camperas from '../assets/Camperas.jpg';
 import Pilusos from '../assets/Pilusos.jpg';
+import { Link } from "react-router-dom";
+
 
 const Cards = () => {
   return (
@@ -13,15 +15,16 @@ const Cards = () => {
       <div className="centered2">
         <h2 className="contact-heading text-center font-sans italic mb-8 text-[30px]  text-amber-600">Artesanía ancestral hecha a mano</h2>
         <div className="grid grid-cols-3 gap-8">
-          <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
-            <img
-
-              src={Mochilas}
-              alt="Mochilas"
-              className="item-img w-full h-64 object-cover rounded-md"
-            />
-            <p className="text-center mt-2">Mochilas de tela</p>
-          </div>
+        <Link to="/detalles-mochila">
+  <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
+    <img
+      src={Mochilas}
+      alt="Mochilas"
+      className="item-img w-full h-64 object-cover rounded-md"
+    />
+    <p className="text-center mt-2">Mochilas de tela</p>
+  </div>
+</Link>
           <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
             <img
               src={Buzos}
