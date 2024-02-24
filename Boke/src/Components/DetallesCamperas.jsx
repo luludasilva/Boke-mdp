@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MochilaImage1 from '../assets/Articulos/DetalleM1.jpg';
-import MochilaImage2 from '../assets/Articulos/Detallem2.jpg';
-import MochilaImage3 from '../assets/Articulos/Detallem3.jpg';
+import CamperaImage1 from '../assets/Articulos/DetalleC1.png';
+import CamperaImage2 from '../assets/Articulos/DetalleC2.png';
+import CamperaImage3 from '../assets/Articulos/DetalleC3.png';
+import CamperaImage4 from '../assets/Articulos/DetalleC4.png';
+import CamperaImage5 from '../assets/Articulos/DetalleC5.png';
+import CamperaImage6 from '../assets/Articulos/DetalleC6.png';
+import CamperaImage7 from '../assets/Articulos/DetalleC7.png';
 import Footer from './Footer';
 
-const DetallesMochila = () => {
+const DetallesCamperas = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const producto = {
     nombre: 'Descripción del Artículo',
     descripcion:
-      'Mochilas realizadas en lienzo. Teñidas con tintes naturales (jarilla). Estampa Estilo Africano (técnica: Serigrafía). Cordón de algodón. Reforzadas. Capsula Exclusiva. Importante: Lavar con Agua fría. No centrifugar. Producto 100% Artesanal.',
-    fotos: [MochilaImage1, MochilaImage2, MochilaImage3],
-    precio: 'Consulta Precio',
+      'Campera con capucha y bolsillo canguro realizados en Tusor en tonos tierra(Arena/Canela/Visón). Cuidados: Lavar con agua fría, centrifugado medio, lavado rápido, plancha media. Producto 100% Artesanal',
+    fotos: [CamperaImage1, CamperaImage2,CamperaImage3, CamperaImage4, CamperaImage5, CamperaImage6, CamperaImage7],
+    precio: 'Consultar por talles disponibles.',
     whatsappLink: 'https://wa.me/542235598969',
   };
 
@@ -29,7 +33,7 @@ const DetallesMochila = () => {
     <>
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2">
-          <h1 className="text-3xl font-bold mb-4 lg:self-center">Mochila</h1>
+          <h1 className="text-3xl font-bold mb-4 lg:self-center">Camperas</h1>
           <div className="lg:max-w-md mx-auto relative w-full h-96 md:h-80 sm:h-64">
             {producto.fotos.map((foto, index) => (
               <img
@@ -67,4 +71,4 @@ const DetallesMochila = () => {
   );
 };
 
-export default DetallesMochila;
+export default DetallesCamperas;

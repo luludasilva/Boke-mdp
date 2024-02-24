@@ -1,9 +1,8 @@
-// App.jsx
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
-import Catalogo from './Components/Catalogo';
-import DetallesMochila from './Components/DetallesMochila'; // Agregamos el nuevo componente DetalleProducto
+import DetallesMochila from './Components/DetallesMochila';
+import DetallesCamperas from "./Components/DetallesCamperas";
 import Nav from "./Components/Nav";
 import Whatsapp from "./Components/Whatsapp";
 import { ThreeCircles } from "react-loader-spinner";
@@ -41,9 +40,8 @@ const App = () => {
             <Nav />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/catalogo" element={<Catalogo />} />
-              <Route path="/detalle/:categoria/:id" element={<DetallesMochila />} />
-              {/* Agrega otras rutas según sea necesario */}
+              <Route path="/detalle/mochilas/:id" element={<DetallesMochila />} />
+              <Route path="/detalle/camperas/:id" element={<DetallesCamperas />} />
             </Routes>
             <Whatsapp />
           </div>
@@ -54,4 +52,3 @@ const App = () => {
 };
 
 export default App;
-

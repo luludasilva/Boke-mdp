@@ -4,18 +4,18 @@ import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import img from "../assets/logo.png";
 import { Link as RouterLink } from "react-router-dom"; 
-import LoginAdmin from "./LoginAdmin";
+
 
 
 const Nav = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
-  const [showLogin, setShowLogin] = useState(false);
+  /*const [showLogin, setShowLogin] = useState(false);
 
   const toggleLogin = () => {
     setShowLogin(!showLogin);
-  };
+  };*/
 
   const content = (
     <>
@@ -42,11 +42,13 @@ const Nav = () => {
               Clientes
             </li>
           </Link>
-          <Link spy={true} smooth={true} to="Login">
+             {/* Lo sacamos por ahora para que no haya ingreso 
+             <Link spy={true} smooth={true} to="Login">
             <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
               Login Admin
             </li>
-          </Link>
+          </Link>*/}
+         
         </ul>
       </div>
     </>
@@ -63,7 +65,7 @@ const Nav = () => {
         </div>
         <div className="lg:flex md:flex lg:flex-1 center justify-center items font-normal hidden">
           <div className="flex-10">
-            <ul className="flex gap-8 mr-16 text-[16px]">
+            <ul className="flex gap-8 mr-16 text-[20px]">
 
             <RouterLink  to="/">
             <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer">
@@ -87,16 +89,23 @@ const Nav = () => {
                 </li>
               </Link>
                 <li className="hover:text-yellow-200 transition border-b-2 border-amber-800 hover:border-black cursor-pointer dropdown">
-                <button onClick={toggleLogin}>Login Admin</button>
+                {/*<button onClick={toggleLogin}>Login Admin</button>*/}
                 </li>
             </ul>
           </div>
         </div>
+       {/* lo sacamos por ahora
+       <Link spy={true} smooth={true} to="Login">
+            <li className="my-4 py-4 border-b bg-red-950 hover:bg-stone-700 hover:rounded">
+              Login Admin
+            </li>
+          </Link>
+          
+        {showLogin && <LoginAdmin />}*/} 
         <div>{click && content}</div>
-        <button className="block sm:hidden transition" onClick={handleClick}>
+           <button className="block sm:hidden transition" onClick={handleClick}>
           {click ? <FaTimes /> : <CiMenuFries />}
         </button>
-        {showLogin && <LoginAdmin />}
       </div>
     </nav>
   );
