@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MochilaImage1 from '../assets/Articulos/DetalleM1.jpg';
-import MochilaImage2 from '../assets/Articulos/Detallem2.jpg';
-import MochilaImage3 from '../assets/Articulos/Detallem3.jpg';
+import MochilaImage2 from '../assets/Articulos/DetalleM2.jpg';
+import MochilaImage3 from '../assets/Articulos/DetalleM3.jpg';
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import Footer from './Footer';
 
