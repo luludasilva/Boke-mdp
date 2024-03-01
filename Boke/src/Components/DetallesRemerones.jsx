@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MochilaImage1 from '../assets/Articulos/DetalleM1.jpg';
-import MochilaImage2 from '../assets/Articulos/Detallem2.jpg';
-import MochilaImage3 from '../assets/Articulos/Detallem3.jpg';
+import RemeronesImage1 from '../assets/Articulos/rem1.png';
+import RemeronesImage2 from '../assets/Articulos/rem2.jpg';
+import RemeronesImage3 from '../assets/Articulos/remeron3.jpg';
+import RemeronesImage4 from '../assets/Articulos/remv1.png';
+import RemeronesImage5 from '../assets/Articulos/remv2.png';
+import RemeronesImage6 from '../assets/Articulos/remv3.png';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 import Footer from './Footer';
 
+
+//----------------------------------------------------------------
 const DetallesMochila = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const producto = {
     nombre: 'Descripción del Artículo',
     descripcion:
-      'Mochilas realizadas en lienzo. Teñidas con tintes naturales (jarilla). Estampa Estilo Africano (técnica: Serigrafía). Cordón de algodón. Reforzadas. Capsula Exclusiva. Importante: Lavar con Agua fría. No centrifugar. Producto 100% Artesanal.',
-    fotos: [MochilaImage1, MochilaImage2, MochilaImage3],
+      'Remeron de Algodón peinado. Bolsillo canguro estampado en serigrafía. Sin mangas. Consultar por Colores y Talles Disponibles. Cuidados: Lavar con Agua Fría, centrifugado suave, lavado rápido, plancha media. Producto 100% artesanal.',
+    fotos: [RemeronesImage1, RemeronesImage2, RemeronesImage3, RemeronesImage4, RemeronesImage5, RemeronesImage6],
     precio: 'Consulta Precio',
     whatsappLink: 'https://wa.me/542235598969',
   };
@@ -27,9 +33,14 @@ const DetallesMochila = () => {
 
   return (
     <>
+      <div>
+        <h2 href="#" onClick={() => window.history.back()} className="text-black-500 hover:underline flex items-center mt-4">
+           <span className="mr-2"><IoIosArrowDropleftCircle /></span> Volver
+        </h2>
+      </div>
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2">
-          <h1 className="text-3xl font-bold mb-4 lg:self-center">Mochila</h1>
+          <h1 className="text-3xl font-bold mb-4 lg:self-center">Remerones y Remerones Vestidos</h1>
           <div className="lg:max-w-md mx-auto relative w-full h-96 md:h-80 sm:h-64">
             {producto.fotos.map((foto, index) => (
               <img

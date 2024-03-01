@@ -1,8 +1,8 @@
 import React from 'react';
 import Mochilas from '../assets/Mochilas.jpg';
-import Buzos from '../assets/Buzos.jpg';
+import Pantalones from '../assets/Pantalones.jpg';
 import Remerones from '../assets/Remerones.jpg';
-import Remeron from '../assets/Remeron.jpg';
+import Musculosas from '../assets/musculosas.jpg';
 import Camperas from '../assets/Camperas.jpg';
 import Pilusos from '../assets/Pilusos.jpg';
 import { Link } from "react-router-dom";
@@ -25,14 +25,14 @@ const Articulos = () => {
               <p className="text-center mt-2">Mochilas de tela</p>
             </div>
           </Link>
-          <Link to="/detalle/buzos/1"> {/* Ajusta la categoría y el ID según tu estructura */}
+          <Link to="/detalle/pantalones/1"> {/* Ajusta la categoría y el ID según tu estructura */}
             <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
               <img
-                src={Buzos}
-                alt="Buzos"
+                src={Pantalones}
+                alt="Pantalones"
                 className="item-img w-full h-64 object-cover rounded-md"
               />
-              <p className="text-center mt-2">Buzos</p>
+              <p className="text-center mt-2">Pantalones</p>
               </div>
           </Link>
           <Link to="/detalle/remerones/1"> {/* Ajusta la categoría y el ID según tu estructura */}
@@ -42,17 +42,17 @@ const Articulos = () => {
               alt="Remerones"
               className="item-img w-full h-64 object-cover rounded-md"
             />
-            <p className="text-center mt-2">Remerones</p>
+            <p className="text-center mt-2">Remerones y Remerones Vestidos</p>
           </div>
           </Link>
-          <Link to="/detalle/remeronvestido/1"> {/* Ajusta la categoría y el ID según tu estructura */}
+          <Link to="/detalle/musculosas/1"> {/* Ajusta la categoría y el ID según tu estructura */}
           <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
             <img
-              src={Remeron}
-              alt="Remeron"
+              src={Musculosas}
+              alt="Musculosas"
               className="item-img w-full h-64 object-cover rounded-md"
             />
-            <p className="text-center mt-2">Remerón vestido</p>
+            <p className="text-center mt-2">Musculosas</p>
           </div>
           </Link>
           <Link to="/detalle/camperas/1"> {/* Ajusta la categoría y el ID según tu estructura */}

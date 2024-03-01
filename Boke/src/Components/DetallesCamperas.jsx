@@ -8,6 +8,7 @@ import CamperaImage5 from '../assets/Articulos/DetalleC5.png';
 import CamperaImage6 from '../assets/Articulos/DetalleC6.png';
 import CamperaImage7 from '../assets/Articulos/DetalleC7.png';
 import Footer from './Footer';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 
 const DetallesCamperas = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -31,6 +32,11 @@ const DetallesCamperas = () => {
 
   return (
     <>
+      <div>
+        <h2 href="#" onClick={() => window.history.back()} className="text-black-500 hover:underline flex items-center mt-4">
+           <span className="mr-2"><IoIosArrowDropleftCircle /></span> Volver
+        </h2>
+      </div>
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2">
           <h1 className="text-3xl font-bold mb-4 lg:self-center">Camperas</h1>

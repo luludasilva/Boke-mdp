@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import MochilaImage1 from '../assets/Articulos/DetalleM1.jpg';
 import MochilaImage2 from '../assets/Articulos/Detallem2.jpg';
 import MochilaImage3 from '../assets/Articulos/Detallem3.jpg';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 import Footer from './Footer';
 
 const DetallesMochila = () => {
@@ -27,8 +28,13 @@ const DetallesMochila = () => {
 
   return (
     <>
+      <div>
+        <h2 href="#" onClick={() => window.history.back()} className="text-black-500 hover:underline flex items-center mt-4">
+           <span className="mr-2"><IoIosArrowDropleftCircle /></span> Volver
+        </h2>
+      </div>
       <div className="flex flex-col lg:flex-row p-4">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2">          
           <h1 className="text-3xl font-bold mb-4 lg:self-center">Mochila</h1>
           <div className="lg:max-w-md mx-auto relative w-full h-96 md:h-80 sm:h-64">
             {producto.fotos.map((foto, index) => (
@@ -41,7 +47,7 @@ const DetallesMochila = () => {
                 }`}
               />
             ))}
-          </div>
+          </div>          
           <div className="flex justify-between mt-2">
             <button onClick={prevImage} className="text-white bg-red-950 px-2 py-1 rounded">
               Anterior
@@ -49,7 +55,7 @@ const DetallesMochila = () => {
             <button onClick={nextImage} className="text-white bg-red-950 px-2 py-1 rounded">
               Siguiente
             </button>
-          </div>
+          </div>          
         </div>
         <div className="lg:w-1/2 p-4">
           <h2 className="text-xl font-semibold">{producto.nombre}</h2>

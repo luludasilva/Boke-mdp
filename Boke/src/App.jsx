@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import DetallesMochila from './Components/DetallesMochila';
+import DetallesRemerones from './Components/DetallesRemerones';
+import DetallesPilusos from './Components/DetallesPilusos';
 import DetallesCamperas from "./Components/DetallesCamperas";
+import DetallesPantalones from "./Components/DetallesPantalones";
+import DetallesMusculosas from "./Components/DetallesMusculosas";
 import Nav from "./Components/Nav";
 import Whatsapp from "./Components/Whatsapp";
 import { ThreeCircles } from "react-loader-spinner";
@@ -41,7 +45,11 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/detalle/mochilas/:id" element={<DetallesMochila />} />
+              <Route path="/detalle/pantalones/:id" element={<DetallesPantalones />} />
               <Route path="/detalle/camperas/:id" element={<DetallesCamperas />} />
+              <Route path="/detalle/remerones/:id" element={<DetallesRemerones />} />
+              <Route path="/detalle/pilusos/:id" element={<DetallesPilusos />} />
+              <Route path="/detalle/musculosas/:id" element={<DetallesMusculosas />} />
             </Routes>
             <Whatsapp />
           </div>

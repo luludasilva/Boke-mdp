@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MochilaImage1 from '../assets/Articulos/DetalleM1.jpg';
-import MochilaImage2 from '../assets/Articulos/Detallem2.jpg';
-import MochilaImage3 from '../assets/Articulos/Detallem3.jpg';
+import PilusosImage1 from '../assets/Articulos/pilu1.jpg';
+import PilusosImage2 from '../assets/Articulos/pilu2.jpg';
+import PilusosImage3 from '../assets/Articulos/pilu3.jpg';
+import { IoIosArrowDropleftCircle } from "react-icons/io";
 import Footer from './Footer';
 
-const DetallesMochila = () => {
+const DetallesPilusos = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const producto = {
     nombre: 'Descripción del Artículo',
     descripcion:
-      'Mochilas realizadas en lienzo. Teñidas con tintes naturales (jarilla). Estampa Estilo Africano (técnica: Serigrafía). Cordón de algodón. Reforzadas. Capsula Exclusiva. Importante: Lavar con Agua fría. No centrifugar. Producto 100% Artesanal.',
-    fotos: [MochilaImage1, MochilaImage2, MochilaImage3],
+      'Pilusos realizados en Lienzo. Teñidos y estampados en serigrafía con simbologías africanas. Consultar por colores disponibles. Talle único. Importante: Lavar con Agua fría. No centrifugar. Producto 100% Artesanal.',
+    fotos: [PilusosImage1, PilusosImage2, PilusosImage3],
     precio: 'Consulta Precio',
     whatsappLink: 'https://wa.me/542235598969',
   };
@@ -27,9 +28,14 @@ const DetallesMochila = () => {
 
   return (
     <>
+      <div>
+        <h2 href="#" onClick={() => window.history.back()} className="text-black-500 hover:underline flex items-center mt-4">
+           <span className="mr-2"><IoIosArrowDropleftCircle /></span> Volver
+        </h2>
+      </div>
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2">
-          <h1 className="text-3xl font-bold mb-4 lg:self-center">Mochila</h1>
+          <h1 className="text-3xl font-bold mb-4 lg:self-center">Pilusos</h1>
           <div className="lg:max-w-md mx-auto relative w-full h-96 md:h-80 sm:h-64">
             {producto.fotos.map((foto, index) => (
               <img
@@ -67,4 +73,4 @@ const DetallesMochila = () => {
   );
 };
 
-export default DetallesMochila;
+export default DetallesPilusos;
