@@ -13,21 +13,7 @@ const Clientes = () => {
  <section id="Clientes" className="main-content py-10 bg-red-950">  
       <div class="centered">
         <h2 className="contact-heading text-center font-sans italic mb-8 text-[30px]  text-amber-600">Nuestros clientes</h2>
-          <div className="grid grid-cols-3 gap-8">
-            <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
-              <img
-                src={cliente}
-                alt="cliente satisfecho"
-                className="item-img w-full h-64 object-cover rounded-md"
-               />
-             </div>
-             <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">
-              <img
-              src={cliente1}
-              alt="cliente satisfecho1"
-              className="item-img w-full h-64 object-cover rounded-md"
-              />
-             </div>
+          <div className="grid grid-row-4 grid-cols-4 gap-10">            
              <div className="item relative overflow-hidden bg-white border border-gray-300 rounded-md transition-transform transform hover:scale-105">        
               <img
                 src={cliente2}
